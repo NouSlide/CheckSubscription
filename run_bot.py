@@ -1,6 +1,3 @@
-from dotenv import load_dotenv, find_dotenv
-import os
-
 import asyncio
 from aiogram import Bot, Dispatcher
 
@@ -9,12 +6,8 @@ from code_bot.handlers_user import private_router
 from channels_db.create_tables import create_tables
 
 
-load_dotenv(find_dotenv())
-
-API_TOKEN = os.getenv('BOT_TOKEN')
-
-
 async def main():
+    API_TOKEN = '123456789' # Токен бота
     bot = Bot(token=API_TOKEN)
     dp = Dispatcher()
 
